@@ -1,0 +1,1312 @@
+/* =================================
+   COMMON PORTFOLIO STYLES
+================================= */
+
+:root {
+    --page-bg: #fffdfd;
+    --white: #ffffff;
+    --pink: #d96f9b;
+    --pink-dark: #b94e7c;
+    --pink-soft: #fff0f5;
+    --lavender: #8b7bc8;
+    --lavender-soft: #f1edff;
+    --heading: #302c3d;
+    --text: #5f5a6c;
+    --muted: #888293;
+    --border: #eee7ef;
+    --radius: 16px;
+    --page-width: 1160px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--page-bg);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: min(var(--page-width), calc(100% - 48px));
+    margin-inline: auto;
+}
+
+
+/* NAVIGATION */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(255, 253, 253, 0.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand {
+    color: var(--heading);
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.brand span {
+    color: var(--pink);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text);
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--pink-dark);
+}
+
+.nav-links .nav-contact {
+    padding: 9px 16px;
+    color: var(--pink-dark);
+    background: var(--pink-soft);
+    border: 1px solid #f4d7e3;
+    border-radius: 9px;
+}
+
+.nav-links .nav-contact:hover {
+    color: #ffffff;
+    background: var(--pink-dark);
+}
+
+
+/* REUSABLE BUTTONS */
+
+.button {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    color: var(--white);
+    background: var(--pink-dark);
+    border-color: var(--pink-dark);
+    box-shadow: 0 5px 14px rgba(185, 78, 124, 0.16);
+}
+
+.button-primary:hover {
+    background: #9f3f69;
+    border-color: #9f3f69;
+}
+
+.button-secondary {
+    color: var(--heading);
+    background: var(--white);
+    border-color: #e5dce8;
+}
+
+.button-secondary:hover {
+    color: var(--pink-dark);
+    background: var(--pink-soft);
+    border-color: #e8bfd1;
+}
+
+a:focus-visible {
+    outline: 3px solid #bba9ef;
+    outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: calc(100% - 36px);
+    }
+    .navbar {
+        min-height: 68px;
+    }
+    .nav-links {
+        gap: 12px;
+    }
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+    .nav-links .nav-contact {
+        padding: 7px 9px;
+    }
+}
+
+@media (max-width: 390px) {
+    .nav-links {
+        gap: 8px;
+    }
+    .nav-links a {
+        font-size: 0.74rem;
+    }
+}
+
+
+/* NAVBAR — SOFT LAVENDER PINK */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient( 100deg, #f8efff 0%, #fff1f6 55%, #fff8f0 100%);
+    border-bottom: 1px solid #ead9ed;
+    box-shadow: 0 4px 18px rgba(112, 76, 123, 0.06);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand {
+    color: #38304b;
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.brand span {
+    color: #c65c91;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+}
+
+.nav-links a {
+    color: #554a61;
+    font-size: 0.91rem;
+    font-weight: 650;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #b34479;
+}
+
+.nav-links .nav-contact {
+    padding: 10px 17px;
+    color: #ffffff;
+    background: #bd5b8d;
+    border: 1px solid #bd5b8d;
+    border-radius: 9px;
+    box-shadow: 0 4px 10px rgba(189, 91, 141, 0.15);
+}
+
+.nav-links .nav-contact:hover {
+    color: #ffffff;
+    background: #a74476;
+    border-color: #a74476;
+}
+
+body {
+    background: linear-gradient( 125deg, #fffafc 0%, #fff0f5 32%, #f5efff 68%, #fff7f0 100%);
+    background-attachment: fixed;
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient( 100deg, #eee5ff 0%, #f9e8f3 52%, #fcebdc 100%);
+    border-bottom: 1px solid #e6d3e8;
+    box-shadow: 0 4px 18px rgba(112, 76, 123, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+.nav-links .nav-contact {
+    padding: 10px 17px;
+    color: #ffffff;
+    background: #b94f83;
+    border: 1px solid #b94f83;
+    border-radius: 9px;
+    box-shadow: 0 4px 10px rgba(185, 79, 131, 0.17);
+}
+
+.nav-links .nav-contact:hover {
+    color: #ffffff;
+    background: #9f3c6e;
+    border-color: #9f3c6e;
+}
+
+
+/* =====================================
+   ABOUT SECTION
+   Soft pink + lavender portfolio theme
+===================================== */
+
+.about-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 100px 24px;
+    scroll-margin-top: 90px;
+    background: linear-gradient( 125deg, #fffafc 0%, #fff1f5 42%, #f6f0ff 78%, #fff8f1 100%);
+    border-top: 1px solid #f3e5ed;
+    border-bottom: 1px solid #eee4f3;
+}
+
+.about-container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+
+/* SECTION HEADING */
+
+.about-heading {
+    max-width: 760px;
+    margin-bottom: 48px;
+}
+
+.about-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #b94e7c;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+.about-label::before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background: #d96f9b;
+}
+
+.about-heading h2 {
+    max-width: 720px;
+    color: #302c3d;
+    font-size: clamp(2.15rem, 4.5vw, 3.35rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.6px;
+}
+
+.about-heading h2 span {
+    color: #b94e7c;
+}
+
+.about-intro {
+    max-width: 680px;
+    margin-top: 18px;
+    color: #6c6376;
+    font-size: 1.04rem;
+    line-height: 1.85;
+}
+
+
+/* MAIN TWO-COLUMN LAYOUT */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+    align-items: start;
+    gap: 55px;
+}
+
+
+/* LEFT COLUMN */
+
+.about-story {
+    min-width: 0;
+}
+
+.about-story>p {
+    margin-bottom: 20px;
+    color: #5f586a;
+    font-size: 0.98rem;
+    line-height: 1.95;
+}
+
+.about-story strong {
+    color: #42344f;
+    font-weight: 750;
+}
+
+
+/* PERSONAL QUOTE */
+
+.about-quote {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 22px 23px;
+    background: rgba(255, 255, 255, 0.65);
+    border-left: 3px solid #c46b99;
+    border-radius: 0 12px 12px 0;
+}
+
+.quote-mark {
+    color: #c46b99;
+    font-family: Georgia, serif;
+    font-size: 2.8rem;
+    line-height: 1;
+}
+
+.about-quote p {
+    padding-top: 5px;
+    color: #51475f;
+    font-size: 0.94rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+
+/* RIGHT COLUMN */
+
+.about-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.about-info-card {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(220, 196, 220, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(88, 62, 97, 0.045);
+}
+
+.card-eyebrow {
+    margin-bottom: 22px;
+    color: #a4517e;
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+
+/* EDUCATION */
+
+.education-marker {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.education-dot {
+    flex: 0 0 11px;
+    width: 11px;
+    height: 11px;
+    margin-top: 7px;
+    background: #c46b99;
+    border: 3px solid #f8dce9;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+.education-marker h3 {
+    color: #383044;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.institution {
+    margin-top: 8px;
+    color: #665c70;
+    font-size: 0.91rem;
+    line-height: 1.7;
+}
+
+.education-duration {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 5px 10px;
+    color: #765c9e;
+    background: #f1edff;
+    border: 1px solid #e4dcff;
+    border-radius: 7px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+/* FOCUS AREAS */
+
+.focus-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.focus-item {
+    display: grid;
+    grid-template-columns: 35px minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+}
+
+.focus-number {
+    display: grid;
+    place-items: center;
+    width: 33px;
+    height: 33px;
+    color: #a74e7c;
+    background: #fff0f5;
+    border: 1px solid #f2d7e4;
+    border-radius: 9px;
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.focus-item h3 {
+    color: #383044;
+    font-size: 0.94rem;
+    line-height: 1.5;
+}
+
+.focus-item p {
+    margin-top: 5px;
+    color: #797082;
+    font-size: 0.86rem;
+    line-height: 1.75;
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .about-section {
+        scroll-behavior: auto;
+    }
+}
+
+
+/* TABLET */
+
+@media (max-width: 850px) {
+    .about-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.9fr);
+        gap: 30px;
+    }
+    .about-info-card {
+        padding: 21px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 680px) {
+    .about-section {
+        padding: 68px 20px;
+    }
+    .about-heading {
+        margin-bottom: 32px;
+    }
+    .about-heading h2 {
+        letter-spacing: -0.8px;
+    }
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .about-story>p {
+        font-size: 0.95rem;
+    }
+    .about-quote {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 390px) {
+    .about-section {
+        padding-inline: 16px;
+    }
+    .about-info-card {
+        padding: 18px;
+    }
+    .about-heading h2 {
+        font-size: 2rem;
+    }
+}
+
+.about-section {
+    width: 100%;
+    padding: 100px 5%;
+    scroll-margin-top: 90px;
+    background: linear-gradient( 125deg, #fffafc 0%, #fff1f5 42%, #f6f0ff 78%, #fff8f1 100%);
+}
+
+
+/* Full-width container */
+
+.about-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* Heading */
+
+.about-heading {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.about-label {
+    color: #8155a8;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.about-heading h2,
+.about-container h2 {
+    color: #30243d;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+
+/* Intro uses the full width */
+
+.about-intro {
+    width: 100%;
+    max-width: 1100px;
+    color: #51475b;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+
+/* Main content: left story + right sidebar */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+    gap: 35px;
+    align-items: start;
+    width: 100%;
+}
+
+
+/* Left column */
+
+.about-story {
+    width: 100%;
+    min-width: 0;
+}
+
+.about-story p {
+    color: #51475b;
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+
+/* Quote */
+
+.about-quote {
+    margin-top: 28px;
+    padding: 24px 28px;
+    border-left: 4px solid #d96f9b;
+    border-radius: 0 16px 16px 0;
+    background: rgba(255, 255, 255, 0.65);
+    color: #624080;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* Right column */
+
+.about-sidebar {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* Education and focus cards */
+
+.about-info-card {
+    width: 100%;
+    padding: 28px;
+    border: 1px solid rgba(129, 85, 168, 0.16);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 8px 28px rgba(90, 60, 100, 0.05);
+}
+
+.about-info-card h3 {
+    color: #624080;
+    font-size: 1.15rem;
+    margin-bottom: 16px;
+}
+
+.about-info-card p {
+    color: #51475b;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+.focus-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.focus-list h4 {
+    color: #30243d;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.focus-list p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+
+/* Responsive layout */
+
+@media (max-width: 800px) {
+    .about-section {
+        padding: 70px 6%;
+    }
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .about-intro {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 55px 20px;
+    }
+    .about-info-card {
+        padding: 22px;
+    }
+    .about-quote {
+        padding: 18px;
+    }
+}
+
+
+/* ========================================
+   GLOBAL PORTFOLIO THEME
+   One consistent pastel background
+======================================== */
+
+:root {
+    --page-bg: #fff9fc;
+    --surface-bg: rgba(255, 255, 255, 0.78);
+    --surface-solid: #ffffff;
+    --pink: #e879a9;
+    --pink-light: #fff0f6;
+    --lavender: #a78bfa;
+    --lavender-light: #f3efff;
+    --peach: #ffbd9b;
+    --text-primary: #30263b;
+    --text-secondary: #756b80;
+    --border-soft: rgba(167, 139, 250, 0.20);
+    --page-width: 1400px;
+}
+
+
+/* Same background throughout the document */
+
+html {
+    scroll-behavior: smooth;
+    background: var(--page-bg);
+}
+
+body {
+    margin: 0;
+    color: var(--text-primary);
+    background: var(--page-bg);
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+
+/* Every main section shares the same background */
+
+main,
+main>section {
+    background-color: var(--page-bg);
+}
+
+
+/* Consistent section spacing */
+
+main>section {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding-block: 88px;
+}
+
+
+/* Consistent content width */
+
+.container,
+.about-container,
+.projects-container,
+.skills-container {
+    width: min(var(--page-width), calc(100% - 64px));
+    margin-inline: auto;
+    box-sizing: border-box;
+}
+
+
+/* Prevent unwanted horizontal overflow */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    main>section {
+        padding-block: 60px;
+    }
+    .container,
+    .about-container,
+    .projects-container,
+    .skills-container {
+        width: calc(100% - 36px);
+    }
+}
+
+:root {
+    --page-bg: #fff9fc;
+}
+
+html,
+body {
+    background: var(--page-bg);
+}
+
+main>section {
+    background-color: var(--page-bg);
+}
+
+
+/* ========================================
+   HERO SPECIALTIES — SOFT PASTEL PILLS
+======================================== */
+
+.hero-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 26px 0 30px;
+}
+
+.hero-specialties span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 17px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: #65518a;
+    background: linear-gradient(135deg, #f3edff 0%, #faf5ff 100%);
+    border: 1px solid #e5d8fa;
+    border-radius: 50px;
+    box-shadow: 0 3px 10px rgba(126, 91, 164, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-specialties span:nth-child(2) {
+    color: #a34f79;
+    background: linear-gradient(135deg, #fff0f5 0%, #fff7f8 100%);
+    border-color: #f6d6e4;
+}
+
+.hero-specialties span:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(126, 91, 164, 0.12);
+    border-color: #cbb4ed;
+}
+
+
+/* ========================================
+   HERO ACTION BUTTONS
+======================================== */
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 25px;
+}
+
+.hero-actions .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 14px 24px;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-actions .button span {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
+
+/* PRIMARY BUTTON — LAVENDER & PURPLE */
+
+.hero-actions .button-primary {
+    color: #ffffff;
+    background: linear-gradient(115deg, #8b69cf 0%, #a477d9 55%, #bd83d2 100%);
+    border-color: #9a76d5;
+    box-shadow: 0 7px 18px rgba(139, 105, 207, 0.23), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.hero-actions .button-primary:hover {
+    color: #ffffff;
+    background: linear-gradient(115deg, #7955c1 0%, #9564cd 55%, #ae70c8 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 11px 24px rgba(139, 105, 207, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.hero-actions .button-primary:active {
+    transform: translateY(-1px);
+}
+
+
+/* SECONDARY BUTTON — WHITE WITH PINK ACCENT */
+
+.hero-actions .button-secondary {
+    color: #875b9e;
+    background: linear-gradient(135deg, #ffffff 0%, #fff8fc 100%);
+    border-color: #e9d5f1;
+    box-shadow: 0 5px 15px rgba(153, 106, 165, 0.08);
+}
+
+.hero-actions .button-secondary:hover {
+    color: #77428f;
+    background: linear-gradient(135deg, #fff1f8 0%, #f8f0ff 100%);
+    border-color: #d9b9e8;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(153, 106, 165, 0.15);
+}
+
+.hero-actions .button-secondary:active {
+    transform: translateY(-1px);
+}
+
+
+/* ARROW ANIMATION */
+
+.hero-actions .button:hover span {
+    transform: translate(3px, -2px);
+}
+
+
+/* ACCESSIBILITY — KEYBOARD FOCUS */
+
+.hero-actions .button:focus-visible,
+.hero-specialties span:focus-visible {
+    outline: 3px solid rgba(139, 105, 207, 0.35);
+    outline-offset: 4px;
+}
+
+
+/* ========================================
+   HERO NOTE
+======================================== */
+
+.hero-note {
+    margin: 0;
+    color: #777080;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.15px;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 600px) {
+    .hero-specialties {
+        gap: 9px;
+        margin: 22px 0 26px;
+    }
+    .hero-specialties span {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+    .hero-actions {
+        gap: 12px;
+    }
+    .hero-actions .button {
+        min-height: 48px;
+        padding: 12px 17px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+    .hero-note {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero-actions .button {
+        width: 100%;
+    }
+}
+
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-specialties span,
+    .hero-actions .button,
+    .hero-actions .button span {
+        transition: none;
+    }
+    .hero-specialties span:hover,
+    .hero-actions .button:hover,
+    .hero-actions .button:active {
+        transform: none;
+    }
+}
+
+
+/* VIEW RESUME — SOFT ROSE PINK */
+
+.hero-actions .button-secondary {
+    color: #9b4567;
+    background: linear-gradient(135deg, #fff0f5 0%, #f9dce8 100%);
+    border: 1px solid #edc3d5;
+    box-shadow: 0 5px 15px rgba(177, 92, 130, 0.10);
+    transition: all 0.3s ease;
+}
+
+.hero-actions .button-secondary:hover {
+    color: #823653;
+    background: linear-gradient(135deg, #f9dce8 0%, #f3c8da 100%);
+    border-color: #e5aec6;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(177, 92, 130, 0.18);
+}
+
+
+/* =========================================
+   GLOBAL THEME — ONE CONSISTENT BACKGROUND
+========================================= */
+
+:root {
+    --page-bg: #fff9fc;
+    /* Keep your existing theme variables */
+    --heading: #30263b;
+    --text: #756b80;
+    --muted: #93869b;
+    --white: #ffffff;
+}
+
+
+/* Apply the same background to the entire page */
+
+html {
+    min-height: 100%;
+    background: var(--page-bg);
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--text);
+}
+
+
+/* Avoid unwanted horizontal gaps */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Keep the main page background consistent */
+
+main {
+    background: var(--page-bg);
+}
+
+
+/* Sections share the same background without separator lines */
+
+main>section {
+    background: transparent !important;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+
+/* =========================================
+   GLOBAL PORTFOLIO STYLES
+   One consistent background for the page
+========================================= */
+
+:root {
+    --page-bg: #fff9fc;
+    --heading: #30263b;
+    --text: #756b80;
+    --muted: #93869b;
+    --white: #ffffff;
+    --pink: #df78a7;
+    --pink-dark: #a34d7a;
+    --pink-soft: #fff0f6;
+    --lavender: #a38bea;
+    --lavender-soft: #f3efff;
+    --border: #f0dce7;
+}
+
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--page-bg);
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--page-bg);
+    color: var(--text);
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+
+/* Images and media */
+
+img {
+    max-width: 100%;
+}
+
+
+/* Main page wrapper */
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--page-bg);
+}
+
+
+/* Every main section uses the same background */
+
+main>section {
+    background-color: transparent;
+    background-image: none;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+
+/* Shared heading colors */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading);
+}
+
+
+/* Shared links */
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Prevent unwanted horizontal overflow */
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* Consistent anchor scrolling */
+
+section[id] {
+    scroll-margin-top: 90px;
+}
+
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* =========================================
+   SHARED SECTION BACKGROUND OVERRIDE
+========================================= */
+
+main>section,
+main>section.hero,
+main>section.about-section,
+main>section.skills-section,
+main>section.projects-section,
+main>section.achievements-section,
+main>section.certifications-section,
+main>section.activities-section,
+main>section.contact-section {
+    background: transparent !important;
+    background-image: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none;
+}
+
+
+/* Keep the page background consistent */
+
+html,
+body,
+main {
+    background-color: var(--page-bg, #fff9fc) !important;
+    background-image: none !important;
+}
+
+
+/* Remove decorative section-level background glows */
+
+main>section::before,
+main>section::after {
+    background: none !important;
+    box-shadow: none !important;
+}
